@@ -46,6 +46,10 @@ export default {
       min-width: 1280px;
     }
     header.desktop{
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      top: 0px;
       display: flex;
       align-items: center;
       height: 100px;
@@ -57,6 +61,7 @@ export default {
     }
     
     main{
+      margin-top:100px;
       min-height: calc(100vh - 100px - 100px);
       box-sizing: border-box;
     }
@@ -65,6 +70,9 @@ export default {
         height: 100px;
         box-sizing: border-box;
         border-top: 1px solid var(--ih-light-grey);
+    }
+    .only-mob {
+      display: none !important;
     }
   } 
   /* 데스크탑 레이아웃 */
@@ -93,6 +101,9 @@ export default {
 
     footer{
       display: none;
+    }
+    .only-desk {
+      display: none  !important;
     }
   }
   /* 모바일 레이아웃 */

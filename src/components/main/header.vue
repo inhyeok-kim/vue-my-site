@@ -36,7 +36,7 @@
   <header class="mobile">
 
     <h1 class="logo">Inheyok.kim</h1>
-    <a href="#" class="menu-btn" @click="clickMenuBtn($event);">
+    <a class="menu-btn" @click="clickMenuBtn($event);">
         <i class="icon-menu-btn" ></i>
     </a>
 
@@ -99,11 +99,18 @@ export default {
         document.querySelector('.mobile .menu-list').classList.add('open');
     },
     mobileMenuClose(){
-        console.log('hi');
         document.querySelector('.mobile .icon-menu-btn').classList.remove('close')
         document.querySelector('.mobile .menu-list').classList.remove('open');
     }
   },
+  mounted : function(){
+    window.addEventListener('popstate',()=>{
+        this.mobileMenuClose();
+        let path = location.pathname.split('/');
+        this.menu = path[1] ? path[1] : 'summary';
+    });
+    document.getElementsByTagName('main')[0].addEventListener('click',this.mobileMenuClose);
+  }
 }
 </script>
 
