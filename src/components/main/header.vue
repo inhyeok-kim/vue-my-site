@@ -115,11 +115,13 @@ export default {
 </script>
 
 <style scoped>
+
     /* 데스크탑 레이아웃 */
     header.desktop h1 {
         margin: 0px;
         width: 20%;
-        text-align: center;
+        padding-left:5%;
+        text-align: left;
         color: var(--ih-black);
     }
 
@@ -128,8 +130,10 @@ export default {
         width: 100%;
         position: absolute;
         justify-content: center;
-        min-width: 1280px;
-        padding: 0px;
+        padding-left: 5%;
+        margin-bottom: 0px;
+        margin-top: 30px;
+        box-sizing: border-box;
     }
 
     header.desktop li.menu{
@@ -160,8 +164,21 @@ export default {
 
     /* 데스크탑 레이아웃 */
 
-    /* 모바일 레이아웃 */
+    @media screen and (max-width :950px) { /** 데스크탑 중간 */
+        header.desktop ul.menu-list{
+            display: flex;
+            width: 100%;
+            position: absolute;
+            justify-content: end;
+            margin-bottom: 0px;
+            margin-top: 30px;
+            padding-right: 5%;
 
+        }
+    }
+
+    /* 모바일 레이아웃 */
+@media screen and (max-width :746px) {
     header.mobile h1{
         text-align: center;
         background: white;
@@ -200,4 +217,5 @@ export default {
         border-bottom: 1px solid var(--ih-grey);
     }
     /* 모바일 레이아웃 */
+}
 </style>

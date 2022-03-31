@@ -6,28 +6,6 @@
     <router-view></router-view>
   </main>
 
-  <footer>
-
-    <ul class="contact-list">
-      <li>
-        Name : Kim Inheyok
-      </li>
-      <li>
-        Email : inheyok.kim@icloud.com
-      </li>
-      <li>
-        Address : Daejeon Seo-gu
-      </li>
-    </ul>
-
-    <ul class="site-list">
-      <li>
-        <a href="https://github.com/dlsgur2323?tab=repositories">GitHub</a>
-      </li>
-    </ul>
-
-  </footer>
-
 </template>
 
 <script>
@@ -41,10 +19,7 @@ export default {
 </script>
 
 <style>
-  @media screen and (min-width :451px) {
-    #app {
-      min-width: 1280px;
-    }
+  @media screen and (min-width :747px) {
     header.desktop{
       position: fixed;
       width: 100%;
@@ -55,6 +30,7 @@ export default {
       height: 100px;
       box-sizing: border-box;
       border-bottom: 1px solid var(--ih-light-grey);
+      z-index: 10;
     }
     header.mobile{
       display: none;
@@ -78,7 +54,7 @@ export default {
   /* 데스크탑 레이아웃 */
 
   /* 모바일 레이아웃 */
-  @media screen and (max-width :450px) {
+  @media screen and (max-width :746px) {
     #app{
       width: 100vw;
     }
@@ -124,5 +100,8 @@ export default {
   a:visited {
     text-decoration: none;
     color : black;
+  }
+  div{
+    box-sizing: border-box;
   }
 </style>
